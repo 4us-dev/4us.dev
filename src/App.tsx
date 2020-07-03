@@ -1,14 +1,13 @@
 import React from "react";
+import Header from "./components/template/Header";
 import { GlobalStyle } from "./styles/GlobalStyle";
-import MenuButton from "./components/menu/MenuButton";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <header>
-        4US DEV
-        {/* <MenuButton /> */}
+        <Header></Header>
       </header>
       <div className="main-content">
         <aside></aside>

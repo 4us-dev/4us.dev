@@ -30,8 +30,7 @@ aside {
   display: flex;
 }
 header {
-  background-color: red;
-  height: 3em;
+  height: 6em;
 }
 
 main {
@@ -41,6 +40,7 @@ main {
 
 footer {
   background-color: green;
+  height: 2em;
 }
 
 .menu-toogle {
