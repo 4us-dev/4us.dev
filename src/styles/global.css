@@ -1,5 +1,9 @@
 @import "./variables.css";
 
+* {
+  border: 0px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--background-color);

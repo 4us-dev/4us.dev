@@ -8,9 +8,10 @@ const ListLink = props => (
   </li>
 )
 
-export default function Drawer({ children }) {
+export default function Drawer({ open }) {
+  console.log('open', open);
   return (
-    <aside className={styles.container}>
+    <aside className={`${styles.container} ${open ? '' : styles.containerClosed}`}>
       <div className={styles.menuLogo}>4US DEV</div>
       <ul className={styles.drawerGroup}>
         <ListLink to="/">Home</ListLink>

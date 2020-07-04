@@ -1,9 +1,12 @@
-@import "../../../styles/variables.css";
-
 .container {
   background-color: var(--surface-color);
   min-width: 300px;
+  max-width: 80vw;
   border-right: 0.1px solid rgb(212, 211, 211);
+  transition: 0.3s;
+}
+.containerClosed{
+  margin-left: -300px;
 }
 
 .menuLogo {
@@ -24,7 +27,4 @@
 }
 
 @media (max-width: 767.98px) {
-  .container {
-    display: none;
-  }
 }

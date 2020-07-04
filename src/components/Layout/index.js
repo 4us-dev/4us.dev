@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Header from "./Header"
 import Drawer from "./Drawer"
 import { useStaticQuery } from "gatsby"
+import useWindowSize from "../../hooks/useWindowSize"
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -15,11 +16,26 @@ export default function Layout({ children }) {
       }
     `
   )
+
+  const { width } = useWindowSize()
+  const menuStateInitial = width >= 768
+  const [menuOpen, setMenuOpen] = useState(menuStateInitial)
+
+  const onMenuToogle = () => {
+    setMenuOpen(!menuOpen)
+  }
+  
+  useEffect(() => {
+    setMenuOpen(menuStateInitial)
+  }, [menuStateInitial])
+  
   return (
     <>
-      <Drawer />
+      <Drawer open={menuOpen} />
       <div className="main-content">
-        <Header>{data.site.siteMetadata.title}</Header>
+        <Header onMenuToogle={onMenuToogle}>
+          {data.site.siteMetadata.title}
+        </Header>
         <main>{children}</main>
       </div>
     </>
