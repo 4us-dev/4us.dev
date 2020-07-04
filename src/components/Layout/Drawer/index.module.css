@@ -1,9 +1,10 @@
 .container {
   background-color: var(--surface-color);
-  min-width: 300px;
-  max-width: 80vw;
+  width: 80vw;
+  max-width: 300px;
   border-right: 0.1px solid rgb(212, 211, 211);
   transition: 0.3s;
+  height: 100vh;
 }
 .containerClosed{
   margin-left: -300px;
@@ -27,4 +28,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .container {
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+  }
 }
