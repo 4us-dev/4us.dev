@@ -3,8 +3,16 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const siteMetadata = require("./src/config/siteMetadata")
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: siteMetadata,
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+  ],
 }

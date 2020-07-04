@@ -1,3 +1,59 @@
-html {
-  background-color: lavenderblush;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e1e1e6;
+}
+
+#gatsby-focus-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  background-color: orange;
+  min-width: 15em;
+}
+
+.main-content {
+  flex: 2;
+  display: flex;
+}
+
+header {
+  /* height: 6em; */
+}
+
+main {
+  background-color: blue;
+  flex: 5;
+  margin: 0rem auto;
+  max-width: 650;
+  padding: 0 1rem;
+}
+
+footer {
+  background-color: green;
+  height: 2em;
+}
+
+.menu-toogle {
+  display: none;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  aside {
+    margin-left: -15em;
+  }
+  .menu-toogle {
+    display: inline;
+  }
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
 }

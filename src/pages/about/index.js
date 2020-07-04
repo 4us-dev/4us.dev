@@ -1,13 +1,13 @@
 import React from "react"
-import Container from "../../components/Container"
+import Layout from "../../components/Layout"
 
 export default () => {
   return (
-    <Container>
+    <Layout>
       <div style={{ color: `purple` }}>
         <h1>About Gatsby!</h1>
         <p>What a world.</p>
       </div>
-    </Container>
+    </Layout>
   )
 }
