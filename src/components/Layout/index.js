@@ -17,14 +17,11 @@ export default function Layout({ children }) {
   )
   return (
     <>
-      <Header>{data.site.siteMetadata.title}</Header>
+      <Drawer />
       <div className="main-content">
-        <aside>
-          <Drawer />
-        </aside>
+        <Header>{data.site.siteMetadata.title}</Header>
         <main>{children}</main>
       </div>
-      <footer>footer</footer>
     </>
   )
 }

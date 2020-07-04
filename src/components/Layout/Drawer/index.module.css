@@ -1,6 +1,30 @@
+@import "../../../styles/variables.css";
+
+.container {
+  background-color: var(--surface-color);
+  min-width: 300px;
+  border-right: 0.1px solid rgb(212, 211, 211);
+}
+
+.menuLogo {
+  height: 250px;
+  color: var(--on-primary-color);
+  background-color: var(--primary-color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .drawerGroup {
   list-style: none;
 }
 
 .drawerItem {
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    display: none;
+  }
 }
