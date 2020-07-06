@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 export default () => {
   return (
-    <Layout>
+    <Layout title="Not Found" description="Page not found" keywords="page,not,found">
       <div style={{ color: `purple` }}>
         <h1>Page not found!</h1>
         <p>Opss! This page not exists</p>

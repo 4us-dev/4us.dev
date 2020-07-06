@@ -32,7 +32,7 @@ export default function Drawer({ open, onMenuToggle }) {
           <ListLink to="/" tabIndex={`${++index}`}>
             Home
           </ListLink>
-          <ListLink to="/password/" tabIndex={`${++index}`}>Password Generate</ListLink>
+          <ListLink to="/password_generate/" tabIndex={`${++index}`}>Password Generate</ListLink>
           <ListLink to="/about/" tabIndex={`${++index}`}>About</ListLink>
         </ul>
       </aside>

@@ -9,7 +9,7 @@ export default () => {
     setPasswordGenerated(passwordGenerate({ length }))
   }
   return (
-    <Layout>
+    <Layout title="Password Generate" description="Generate a password strong and security to you" keywords="password,generate,strong,security">
       <div style={{ color: `purple` }}>
         <h1>Password generate!</h1>
         <p>What a world.</p>
