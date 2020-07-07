@@ -1,13 +1,12 @@
 import React from "react"
 import Layout from "../../components/Layout"
+import Title from "../../components/Layout/Title"
 
 export default () => {
   return (
     <Layout title="About" description="About 4U DEV" keywords="about,4us,dev">
-      <div style={{ color: `purple` }}>
-        <h1>About Gatsby!</h1>
-        <p>What a world.</p>
-      </div>
+      <Title>About 4U DEV</Title>
+      <p>What a world.</p>
     </Layout>
   )
 }
