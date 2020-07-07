@@ -4,11 +4,13 @@ import styles from "./index.module.css"
 
 const ListLink = props => (
   <li className={styles.drawerItem}>
-    <Link to={props.to} tabIndex={props.tabIndex}>{props.children}</Link>
+    <Link to={props.to} tabIndex={props.tabIndex}>
+      {props.children}
+    </Link>
   </li>
 )
 
-export default function Drawer({ open, onMenuToggle }) {
+export default ({ open, onMenuToggle }) => {
   const asideClasses = `${styles.container} ${
     open ? "" : styles.containerClosed
   }`
@@ -21,7 +23,7 @@ export default function Drawer({ open, onMenuToggle }) {
           onClick={onMenuToggle}
           onKeyDown={onMenuToggle}
           role="button"
-          tabIndex='0'
+          tabIndex="0"
         >
           Close
         </span>
@@ -32,8 +34,12 @@ export default function Drawer({ open, onMenuToggle }) {
           <ListLink to="/" tabIndex={`${++index}`}>
             Home
           </ListLink>
-          <ListLink to="/password_generator/" tabIndex={`${++index}`}>Password Generate</ListLink>
-          <ListLink to="/about/" tabIndex={`${++index}`}>About</ListLink>
+          <ListLink to="/password_generator/" tabIndex={`${++index}`}>
+            Password Generate
+          </ListLink>
+          <ListLink to="/about/" tabIndex={`${++index}`}>
+            About
+          </ListLink>
         </ul>
       </aside>
     </>

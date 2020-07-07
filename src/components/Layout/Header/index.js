@@ -3,7 +3,7 @@ import React from "react"
 import styles from "./index.module.css"
 import { FaBars } from 'react-icons/fa';
 
-export default function Header({ children, onMenuToogle }) {
+export default ({ children, onMenuToogle }) => {
   return (
     <header className={styles.container}>
       <Link to="/" className={styles.homeLink}>

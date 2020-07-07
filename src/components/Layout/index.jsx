@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
-import Header from "./Header"
-import Drawer from "./Drawer"
-import { useStaticQuery } from "gatsby"
-import useWindowSize from "../../hooks/useWindowSize"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import React, { useEffect, useState } from "react"
 import { Helmet } from "react-helmet"
+import useWindowSize from "../../hooks/useWindowSize"
+import Drawer from "./Drawer"
+import Header from "./Header"
+import firebase from "gatsby-plugin-firebase"
+
 
 export default function Layout({ children, title, description, keywords }) {
   if (!title) throw Error("title is required")
@@ -22,6 +23,7 @@ export default function Layout({ children, title, description, keywords }) {
     `
   )
 
+  firebase.analytics();
   const { width } = useWindowSize()
   const menuStateInitial = width >= 768
   const [menuOpen, setMenuOpen] = useState(menuStateInitial)

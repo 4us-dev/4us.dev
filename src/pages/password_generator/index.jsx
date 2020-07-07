@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../../components/Layout"
-import passwordGenerate from "../../utils/passwordGenerate"
 import Title from "../../components/Layout/Title"
+import passwordGenerate from "../../utils/passwordGenerate"
 
 export default () => {
   const [length, setLength] = useState(16)
@@ -32,78 +32,88 @@ export default () => {
     >
       <Title>Password generator</Title>
       <form onSubmit={generatePassword}>
-        <div>
-          <label htmlFor="lenght">Password Length:</label>
-          <input
-            id="lenght"
-            name="lenght"
-            type="number"
-            value={length}
-            onChange={({ target }) => setLength(target.value)}
-          />
-        </div>
+        <fieldset>
+          <label htmlFor="lenght">
+            Password Length:
+            <input
+              id="lenght"
+              name="lenght"
+              type="number"
+              value={length}
+              onChange={({ target }) => setLength(target.value)}
+            />
+          </label>
+        </fieldset>
 
-        <div>
-          <label htmlFor="lower">Include Lowercase Characters:</label>
-          <input
-            id="lower"
-            name="lower"
-            type="checkbox"
-            checked={lower}
-            onChange={({ target }) => setLower(target.checked)}
-          />
-          <small>( e.g. abcdefgh )</small>
-        </div>
+        <fieldset>
+          <label htmlFor="lower">
+            Include Lowercase Characters:
+            <input
+              id="lower"
+              name="lower"
+              type="checkbox"
+              checked={lower}
+              onChange={({ target }) => setLower(target.checked)}
+            />
+            <small>( e.g. abcdefgh )</small>
+          </label>
+        </fieldset>
 
-        <div>
-          <label htmlFor="upper">Include Uppercase Characters:</label>
-          <input
-            id="upper"
-            name="upper"
-            type="checkbox"
-            checked={upper}
-            onChange={({ target }) => setUpper(target.checked)}
-          />
-          <small>( e.g. ABCDEFGH )</small>
-        </div>
+        <fieldset>
+          <label htmlFor="upper">
+            Include Uppercase Characters:
+            <input
+              id="upper"
+              name="upper"
+              type="checkbox"
+              checked={upper}
+              onChange={({ target }) => setUpper(target.checked)}
+            />
+            <small>( e.g. ABCDEFGH )</small>
+          </label>
+        </fieldset>
 
-        <div>
-          <label htmlFor="numbers">Include Numbers:</label>
-          <input
-            id="numbers"
-            name="numbers"
-            type="checkbox"
-            checked={numbers}
-            onChange={({ target }) => setNumbers(target.checked)}
-          />
-          <small>( e.g. 123456 )</small>
-        </div>
+        <fieldset>
+          <label htmlFor="numbers">
+            Include Numbers:
+            <input
+              id="numbers"
+              name="numbers"
+              type="checkbox"
+              checked={numbers}
+              onChange={({ target }) => setNumbers(target.checked)}
+            />
+            <small>( e.g. 123456 )</small>
+          </label>
+        </fieldset>
 
-        <div>
-          <label htmlFor="specialSimple">Include Simple Characters:</label>
-          <input
-            id="specialSimple"
-            name="specialSimple"
-            type="checkbox"
-            checked={specialSimple}
-            onChange={({ target }) => setSpecialSimple(target.checked)}
-          />
-          <small>( e.g. !#$%&*_+=-^~?;:.,| )</small>
-        </div>
+        <fieldset>
+          <label htmlFor="specialSimple">
+            Include Simple Characters:
+            <input
+              id="specialSimple"
+              name="specialSimple"
+              type="checkbox"
+              checked={specialSimple}
+              onChange={({ target }) => setSpecialSimple(target.checked)}
+            />
+            <small>( e.g. !#$%&*_+=-^~?;:.,| )</small>
+          </label>
+        </fieldset>
 
-        <div>
+        <fieldset>
           <label htmlFor="specialAmbiguous">
             Include Ambiguous Characters:
+            <input
+              id="specialAmbiguous"
+              name="specialAmbiguous"
+              type="checkbox"
+              checked={specialAmbiguous}
+              onChange={({ target }) => setSpecialAmbiguous(target.checked)}
+            />
+            <small>( e.g. "()'`´{[]}\/&gt;&lt; )</small>
           </label>
-          <input
-            id="specialAmbiguous"
-            name="specialAmbiguous"
-            type="checkbox"
-            checked={specialAmbiguous}
-            onChange={({ target }) => setSpecialAmbiguous(target.checked)}
-          />
-          <small>( e.g. "()'`´{[]}\/&gt;&lt; )</small>
-        </div>
+        </fieldset>
 
         <div>
           <button type="submit">Generate Password</button>

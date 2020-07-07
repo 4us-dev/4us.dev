@@ -1,4 +1,5 @@
 import "./src/styles/global.css"
+import 'firebase/analytics'
 
 export const onServiceWorkerUpdateReady = () => {
     const answer = window.confirm(
