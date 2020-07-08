@@ -1,0 +1,17 @@
+.myLabel {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.myInput {
+  padding: 10px 10px 0 10px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid black;
+}
+
+.myInput:focus {
+  outline: none;
+}
