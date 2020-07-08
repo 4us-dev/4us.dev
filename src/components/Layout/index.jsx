@@ -4,11 +4,17 @@ import { Helmet } from "react-helmet"
 import useWindowSize from "../../hooks/useWindowSize"
 import Drawer from "./Drawer"
 import Header from "./Header"
+import firebase from "gatsby-plugin-firebase"
 
 export default function Layout({ children, title, description, keywords }) {
   if (!title) throw Error("title is required")
   if (!description) throw Error("description is required")
   if (!keywords) throw Error("keywords is required")
+  
+  useEffect(() => {
+    firebase.analytics().logEvent(title)
+  }, [title])
+
   const data = useStaticQuery(
     graphql`
       query {

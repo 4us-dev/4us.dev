@@ -11,7 +11,7 @@ export default () => {
     >
       <Title>4US DEV</Title>
       <p>What a world.</p>
-      <img src={logo} alt="4us dev logo" />
+      <img src={logo} className='img-responsive' alt="4us dev logo" />
     </Layout>
   )
 }

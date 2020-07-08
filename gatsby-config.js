@@ -28,6 +28,16 @@ module.exports = {
           messagingSenderId: "221716460761",
           appId: "1:221716460761:web:c004745e4ea9b87087fac8",
           measurementId: "G-0HG9HR9T4X",
+        },
+        features: {          
+          auth: false,       
+          database: false,  
+          firestore: false,
+          storage: false,    
+          messaging: false, 
+          functions: false,  
+          performance: false, 
+          analytics:true,
         }
       }
     },

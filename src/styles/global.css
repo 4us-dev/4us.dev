@@ -24,9 +24,9 @@ main {
   padding: 0 1rem;
 }
 
-footer {
-  background-color: green;
-  height: 2em;
+.img-responsive {
+  width: 100%;
+  height: auto;
 }
 
 .hide {
