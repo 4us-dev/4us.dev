@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./index.module.css"
+import logo from "../../../images/logo-white.png"
 
 const ListLink = props => (
   <li className={styles.drawerItem}>
@@ -29,7 +30,9 @@ export default ({ open, onMenuToggle }) => {
         </span>
       )}
       <aside className={asideClasses}>
-        <div className={styles.menuLogo}>4US DEV</div>
+        <div className={styles.menuLogo}>
+          <img src={logo} className="img-responsive" alt="4us dev logo" />
+        </div>
         <ul className={styles.drawerGroup}>
           <ListLink to="/" tabIndex={`${++index}`}>
             Home

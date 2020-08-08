@@ -20,6 +20,11 @@
   justify-content: center;
 }
 
+.menuLogo > img {
+  width: 80%;
+  margin-right: 15px;
+}
+
 .drawerGroup {
   list-style: none;
 }

@@ -1,7 +1,12 @@
 @import "./variables.css";
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 body {
-  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   color: var(--on-background-color);
   background-color: var(--background-color);
 }
