@@ -1,7 +1,12 @@
 import React from "react"
+import Card from "../components/Card"
 import Layout from "../components/Layout"
 import Title from "../components/Layout/Title"
-import logo from "../images/logo.png"
+import CardHeader from "../components/CardHeader"
+import CardBody from "../components/CardBody"
+import passwordImage from "../images/password.jpg"
+import Image from "../components/Image"
+
 export default () => {
   return (
     <Layout
@@ -9,9 +14,16 @@ export default () => {
       description="4U DEV is a website developed to help us developers"
       keywords="home,4us,dev"
     >
-      <Title>4US DEV</Title>
-      <p>What a world.</p>
-      <img src={logo} className='img-responsive' alt="4us dev logo" />
+      <Title>Trending tools</Title>
+      <Card style={{ width: "45%" }}>
+        <CardHeader>Password Generator</CardHeader>
+        <a href="/password_generator">
+          <Image
+            src={passwordImage}
+            alt="keyboard with word password over it and a lock"
+          />
+        </a>
+      </Card>
     </Layout>
   )
 }

@@ -1,0 +1,7 @@
+.container {
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--on-primary-color);
+  background-color: var(--primary-color);
+}
