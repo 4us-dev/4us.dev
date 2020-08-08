@@ -5,6 +5,16 @@
   padding: 0;
   border: 0;
 }
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-variant-color);
+}
+
 body {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   color: var(--on-background-color);

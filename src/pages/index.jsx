@@ -17,12 +17,14 @@ export default () => {
       <Title>Trending tools</Title>
       <Card style={{ width: "45%" }}>
         <CardHeader>Password Generator</CardHeader>
-        <a href="/password_generator">
-          <Image
-            src={passwordImage}
-            alt="keyboard with word password over it and a lock"
-          />
-        </a>
+        <div style={{ overflow: "hidden" }}>
+          <a href="/password_generator">
+            <Image
+              src={passwordImage}
+              alt="keyboard with word password over it and a lock"
+            />
+          </a>
+        </div>
       </Card>
     </Layout>
   )
