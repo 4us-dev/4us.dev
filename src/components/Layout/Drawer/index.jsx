@@ -38,7 +38,7 @@ export default ({ open, onMenuToggle }) => {
             Home
           </ListLink>
           <ListLink to="/password_generator/" tabIndex={`${++index}`}>
-            Password Generate
+            Password Generator
           </ListLink>
           <ListLink to="/about/" tabIndex={`${++index}`}>
             About
