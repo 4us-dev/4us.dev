@@ -1,3 +1,11 @@
+.root {
+  color: var(--on-surface-color);
+  background-color: var(--surface-color);
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 8px 8px 0;
+}
+
 .myLabel {
   font-weight: 700;
   display: flex;
@@ -9,7 +17,8 @@
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(148, 148, 148);
+  font-size: 1.3rem;
 }
 
 .myInput:focus {

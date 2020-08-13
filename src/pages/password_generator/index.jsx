@@ -3,14 +3,19 @@ import Layout from "../../components/Layout"
 import Title from "../../components/Layout/Title"
 import passwordGenerate from "../../utils/passwordGenerate"
 import InputField from "../../components/inputs/InputField"
+import Button from "../../components/Button"
+import styles from "./index.module.css"
+import Tooltip from "../../components/Tooltip"
+import { useEffect } from "react"
 
 export default () => {
-  const [length, setLength] = useState(16)
+  const [copyMessage, setCopyMessage] = useState("Copy to clipboard")
+  const [length, setLength] = useState(8)
   const [lower, setLower] = useState(true)
   const [upper, setUpper] = useState(true)
   const [numbers, setNumbers] = useState(true)
-  const [specialSimple, setSpecialSimple] = useState(true)
-  const [specialAmbiguous, setSpecialAmbiguous] = useState(true)
+  const [specialSimple, setSpecialSimple] = useState(false)
+  const [specialAmbiguous, setSpecialAmbiguous] = useState(false)
   const [passwordGenerated, setPasswordGenerated] = useState("")
   const generatePassword = event => {
     event.preventDefault()
@@ -25,6 +30,22 @@ export default () => {
       })
     )
   }
+
+  const onCopy = value => {
+    console.log("value", value)
+    const el = document.createElement("textarea")
+    el.value = value
+    el.setAttribute("readonly", "")
+    el.style.position = "absolute"
+    el.style.left = "-9999px"
+    document.body.appendChild(el)
+    el.select()
+    el.setSelectionRange(0, 99999) /*For mobile devices*/
+    document.execCommand("copy")
+    document.body.removeChild(el)
+    setCopyMessage("Copied")
+  }
+
   return (
     <Layout
       title="Password Generator"
@@ -99,13 +120,27 @@ export default () => {
         </div>
 
         <div>
-          <button type="submit">Generate Password</button>
+          <Button type="submit">Generate Password</Button>
         </div>
       </form>
 
-      <div>
-        <textarea rows="4" value={passwordGenerated}></textarea>
-      </div>
+      {passwordGenerated && (
+        <div className={styles.passwordList}>
+          <div className={styles.passwordValueContainer}>
+            <div className={styles.passwordValue}>{passwordGenerated}</div>
+            <div className={styles.passwordCopyButtonContainer}>
+              <Tooltip message={copyMessage}>
+                <Button
+                  onClick={() => onCopy(passwordGenerated)}
+                  onMouseOut={() => setCopyMessage("Copy to clipboard")}
+                >
+                  Copy
+                </Button>
+              </Tooltip>
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }

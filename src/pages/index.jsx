@@ -1,11 +1,10 @@
 import React from "react"
 import Card from "../components/Card"
+import CardHeader from "../components/CardHeader"
+import Image from "../components/Image"
 import Layout from "../components/Layout"
 import Title from "../components/Layout/Title"
-import CardHeader from "../components/CardHeader"
-import CardBody from "../components/CardBody"
 import passwordImage from "../images/password.jpg"
-import Image from "../components/Image"
 
 export default () => {
   return (
