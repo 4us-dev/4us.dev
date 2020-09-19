@@ -13,7 +13,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
     <GlobalErrorHandler>
       <Head>
         <title>
-          {title} - {process.env.NEXT_PUBLIC_APP_NAME}
+          {title ? `${title} -` : ""} {process.env.NEXT_PUBLIC_APP_NAME}
         </title>
       </Head>
       <MyHeader />

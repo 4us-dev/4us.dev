@@ -12,7 +12,7 @@ const Banner: React.FC<Props> = ({ title, message }) => {
 
   return (
     <div className={classes.heroContent}>
-      <Container maxWidth="sm">
+      <Container className={classes.heroTextContainer}>
         <Typography
           component="h1"
           variant="h2"

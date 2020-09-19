@@ -21,7 +21,7 @@ const cards = [
 
 const Home = () => {
   return (
-    <Layout title="Home">
+    <Layout title="">
       <Banner
         title={process.env.NEXT_PUBLIC_APP_NAME}
         message="Various tools to help you"
