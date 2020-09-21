@@ -1,11 +1,9 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core"
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: 250,
-    },
-  })
-)
+const useStyles = makeStyles({
+  root: {
+    width: 250,
+  },
+})
 
 export default useStyles

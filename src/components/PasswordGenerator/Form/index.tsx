@@ -4,7 +4,6 @@ import {
   FormControlLabel,
   FormGroup,
   FormHelperText,
-  FormLabel,
   Grid,
   Paper,
   Switch,

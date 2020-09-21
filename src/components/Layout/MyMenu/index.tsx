@@ -7,7 +7,6 @@ import {
 } from "@material-ui/core"
 import MailIcon from "@material-ui/icons/Mail"
 import InboxIcon from "@material-ui/icons/MoveToInbox"
-import { useRouter } from "next/router"
 import React from "react"
 import Link from "../../Link"
 import useStyles from "./index.styles"
