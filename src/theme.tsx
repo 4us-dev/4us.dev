@@ -21,6 +21,18 @@ const theme = createMuiTheme({
       paper: "#fff",
     },
   },
+  // overrides: {
+  //   MuiCssBaseline: {
+  //     "@global": {
+  //       body: {
+  //         minHeight: "100vh",
+  //         "& .__next": {
+  //           minHeight: "100vh",
+  //         },
+  //       },
+  //     },
+  //   },
+  // },
 })
 
 export default theme

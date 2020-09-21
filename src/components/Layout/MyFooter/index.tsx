@@ -15,6 +15,7 @@ const MyFooter = () => {
         align="center"
         color="textSecondary"
         component="p"
+        gutterBottom
       >
         <a href={`mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL}`}>
           {process.env.NEXT_PUBLIC_BUSINESS_EMAIL}
