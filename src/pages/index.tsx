@@ -8,14 +8,14 @@ const cards = [
     title: "Password Generator",
     image: "images/password.jpg",
     description: "Generate strong and secure passwords",
-    actionTitle: "Try it!",
+    link: "/password_generator",
   },
   {
     title: "PKCE",
     image: "images/oauth2-search.png",
     description:
       "Generate code verifier and code challenge for OAuth with PKCE.",
-    actionTitle: "Try it!",
+    link: "/pkce",
   },
 ]
 
