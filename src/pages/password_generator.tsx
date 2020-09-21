@@ -24,8 +24,6 @@ const PasswordGenerator = () => {
       specialAmbiguous: config.specialAmbiguous,
     })
 
-    console.log("value", value)
-    console.log("valuer", typeof value)
     setPasswordActual(value)
   }
 

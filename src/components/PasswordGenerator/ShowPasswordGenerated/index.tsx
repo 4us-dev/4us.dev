@@ -1,4 +1,11 @@
-import { Button, FormControl, Grid, Paper, TextField } from "@material-ui/core"
+import {
+  Button,
+  FormControl,
+  Grid,
+  Paper,
+  TextField,
+  Tooltip,
+} from "@material-ui/core"
 import React from "react"
 import copyToClipboard from "../../../../lib/copyToClipboard"
 import useStyles from "./index.styles"
@@ -34,9 +41,15 @@ const ShowPasswordGenerated: React.FC<Props> = ({
           </FormControl>
         </Grid>
         <Grid item xs={2}>
-          <Button variant="contained" color="secondary" onClick={copyPassword}>
-            COPY
-          </Button>
+          <Tooltip title="Copy to clipboard" placement="top">
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={copyPassword}
+            >
+              COPY
+            </Button>
+          </Tooltip>
         </Grid>
       </Grid>
     </Paper>
