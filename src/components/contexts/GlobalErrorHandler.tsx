@@ -1,36 +1,34 @@
-import { Button, IconButton, Snackbar } from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
-import React, { useState } from "react";
-import { SWRConfig } from "swr";
-import { fetcherJson } from "../../../lib/fetcher";
+import { Button, IconButton, Snackbar } from "@material-ui/core"
+import CloseIcon from "@material-ui/icons/Close"
+import React, { useState } from "react"
+import { SWRConfig } from "swr"
+import { fetcherJson } from "../../../lib/fetcher"
 
 export interface Message {
-  message: string;
-  data: any;
-  type: "info" | "danger" | "success" | "warning";
+  message: string
+  data: any
+  type: "info" | "danger" | "success" | "warning"
 }
 const GlobalErrorHandler: React.FC<React.PropsWithChildren<any>> = ({
   children,
 }) => {
-  const [message, setMessage] = useState<Message>();
+  const [message, setMessage] = useState<Message>()
 
   const handleClose = () => {
-    console.log("close");
-    setMessage(undefined);
-  };
+    setMessage(undefined)
+  }
 
   const onError = (error: any, key: any) => {
-    console.log("errr111", error);
+    console.error(error, key)
     if (error.status !== 403 && error.status !== 404) {
       setMessage({
         message: `${error?.message}`,
         data: { error, key },
         type: "danger",
-      });
+      })
     }
-  };
+  }
 
-  console.log("message", message);
   return (
     <SWRConfig
       value={{
@@ -65,7 +63,7 @@ const GlobalErrorHandler: React.FC<React.PropsWithChildren<any>> = ({
         }
       />
     </SWRConfig>
-  );
-};
+  )
+}
 
-export default GlobalErrorHandler;
+export default GlobalErrorHandler

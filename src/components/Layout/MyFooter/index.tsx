@@ -1,6 +1,7 @@
 import Typography from "@material-ui/core/Typography"
 import React from "react"
 import Copyright from "../../Copyright"
+import Link from "../../Link"
 import useStyles from "./index.styles"
 
 const MyFooter = () => {
@@ -17,9 +18,9 @@ const MyFooter = () => {
         component="p"
         gutterBottom
       >
-        <a href={`mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL}`}>
+        <Link href={`mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL}`}>
           {process.env.NEXT_PUBLIC_BUSINESS_EMAIL}
-        </a>
+        </Link>
       </Typography>
       <Copyright />
     </footer>
