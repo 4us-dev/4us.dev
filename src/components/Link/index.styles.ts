@@ -1,11 +1,13 @@
-import { makeStyles } from "@material-ui/core"
+import { createStyles, makeStyles } from "@material-ui/core"
 
-const useStyles = makeStyles(() => ({
-  root: {
-    "&:hover": {
-      textDecoration: "none",
+const useStyles = makeStyles(() =>
+  createStyles({
+    root: {
+      "&:hover": {
+        textDecoration: "none",
+      },
     },
-  },
-}))
+  })
+)
 
 export default useStyles

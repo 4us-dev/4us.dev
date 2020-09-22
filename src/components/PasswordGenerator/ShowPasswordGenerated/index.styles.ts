@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: theme.spacing(1),
       },
     },
+    formControl: {
+      margin: theme.spacing(1),
+    },
   })
 )
 export default useStyles

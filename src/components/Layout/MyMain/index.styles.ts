@@ -1,9 +1,11 @@
-import { makeStyles } from "@material-ui/core"
+import { createStyles, makeStyles } from "@material-ui/core"
 
-const useStyles = makeStyles(() => ({
-  root: {
-    flex: 1,
-  },
-}))
+const useStyles = makeStyles(() =>
+  createStyles({
+    root: {
+      flex: 1,
+    },
+  })
+)
 
 export default useStyles
