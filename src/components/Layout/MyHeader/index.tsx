@@ -8,7 +8,7 @@ import Link from "../../Link"
 import MyMenu from "../MyMenu"
 import useStyles from "./index.styles"
 
-const MyHeader = () => {
+const MyHeader = (): JSX.Element => {
   const classes = useStyles()
   const [menuOpen, setMenuOpen] = React.useState(false)
   const toggleDrawer = (open: boolean) => (

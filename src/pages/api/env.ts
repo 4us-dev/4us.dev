@@ -1,8 +1,8 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next"
 
-export default (_req: NextApiRequest, res: NextApiResponse) => {
+export default (_req: NextApiRequest, res: NextApiResponse): void => {
   res.status(200).json({
     node_env: process.env.NODE_ENV,
     app_env: process.env.APP_ENV,
-  });
-};
+  })
+}

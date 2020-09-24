@@ -19,7 +19,7 @@ const cards = [
   },
 ]
 
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <Layout title="">
       <Banner

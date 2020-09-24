@@ -6,14 +6,14 @@ import CssBaseline from "@material-ui/core/CssBaseline"
 import theme from "../theme"
 import GlobalErrorHandler from "../components/contexts/GlobalErrorHandler"
 
-export default function MyApp(props: AppProps) {
+export default function MyApp(props: AppProps): JSX.Element {
   const { Component, pageProps } = props
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side")
     if (jssStyles) {
-      jssStyles.parentElement!.removeChild(jssStyles)
+      jssStyles.parentElement?.removeChild(jssStyles)
     }
   }, [])
 

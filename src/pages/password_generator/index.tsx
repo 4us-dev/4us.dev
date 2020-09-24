@@ -10,7 +10,7 @@ import ShowPasswordAndCopy from "./_componentes/PasswordGeneratorForm/ShowPasswo
 
 const randomUtils = new RandomUtils()
 
-const PasswordGenerator = () => {
+const PasswordGenerator = (): JSX.Element => {
   const [passwordActual, setPasswordActual] = useState("")
 
   const generatePassword = (config: PasswordGeneratorConfig) => {

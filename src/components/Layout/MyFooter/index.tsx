@@ -4,7 +4,7 @@ import Copyright from "../../Copyright"
 import Link from "../../Link"
 import useStyles from "./index.styles"
 
-const MyFooter = () => {
+const MyFooter = (): JSX.Element => {
   const classes = useStyles()
   return (
     <footer className={classes.footer}>

@@ -6,7 +6,7 @@ import Copyright from "../components/Copyright"
 import Layout from "../components/Layout"
 import Link from "../components/Link"
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <Layout title="Sobre">
       <Container maxWidth="sm">
