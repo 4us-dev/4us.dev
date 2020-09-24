@@ -29,7 +29,7 @@ const menuList1 = [
   {
     title: "PKCE Generator",
     icon: <InboxIcon />,
-    link: "/pcke",
+    link: "/pkce_generator",
   },
 ]
 

@@ -8,7 +8,7 @@ import {
   Tooltip,
 } from "@material-ui/core"
 import React, { useState } from "react"
-import copyToClipboard from "../../../../../../lib/copyToClipboard"
+import copyToClipboard from "../../../../../lib/copyToClipboard"
 import useStyles from "./index.styles"
 
 interface Props {

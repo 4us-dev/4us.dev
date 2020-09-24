@@ -6,7 +6,7 @@ import Title from "../../components/Title"
 import PasswordGeneratorForm, {
   PasswordGeneratorConfig,
 } from "./_componentes/PasswordGeneratorForm"
-import ShowPasswordAndCopy from "./_componentes/PasswordGeneratorForm/ShowPasswordAndCopy"
+import ShowPasswordAndCopy from "./_componentes/ShowPasswordAndCopy"
 
 const randomUtils = new RandomUtils()
 
