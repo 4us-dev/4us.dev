@@ -15,7 +15,7 @@ const cards = [
     image: "images/oauth2-search.png",
     description:
       "Generate code verifier and code challenge for OAuth with PKCE.",
-    link: "/pkce",
+    link: "/pkce_generator",
   },
 ]
 

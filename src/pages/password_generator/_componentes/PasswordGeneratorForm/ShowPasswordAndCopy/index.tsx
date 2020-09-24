@@ -8,14 +8,14 @@ import {
   Tooltip,
 } from "@material-ui/core"
 import React, { useState } from "react"
-import copyToClipboard from "../../../../lib/copyToClipboard"
+import copyToClipboard from "../../../../../../lib/copyToClipboard"
 import useStyles from "./index.styles"
 
 interface Props {
   password: string
   onChangePassword: (value: string) => void
 }
-const ShowPasswordGenerated: React.FC<Props> = ({
+const ShowPasswordAndCopy: React.FC<Props> = ({
   password,
   onChangePassword,
 }) => {
@@ -65,4 +65,4 @@ const ShowPasswordGenerated: React.FC<Props> = ({
   )
 }
 
-export default ShowPasswordGenerated
+export default ShowPasswordAndCopy
