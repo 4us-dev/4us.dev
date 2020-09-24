@@ -58,18 +58,17 @@ const PasswordGeneratorForm: React.FC<Props> = ({ onSubmit }) => {
   }
 
   return (
-    <Paper>
+    <Paper className={classes.root}>
       <form
         onSubmit={generatePassword}
-        className={classes.root}
+        // className={classes.root}
         noValidate
         autoComplete="off"
       >
-        <Grid container spacing={4}>
+        <Grid container spacing={3}>
           <Grid item xs={12}>
             <FormControl fullWidth>
               <TextField
-                className={classes.input}
                 label="Length"
                 name="length"
                 type="number"

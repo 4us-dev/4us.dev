@@ -1,5 +1,4 @@
 import { RandomUtils } from "@4us-dev/utils"
-import Box from "@material-ui/core/Box"
 import Container from "@material-ui/core/Container"
 import React, { useState } from "react"
 import Layout from "../components/Layout"
@@ -30,15 +29,13 @@ const PasswordGenerator = () => {
   return (
     <Layout title="Password Generator">
       <Container>
-        <Box my={4}>
-          <Title>Password Generator</Title>
-          <PasswordGeneratorForm onSubmit={generatePassword} />
+        <Title>Password Generator</Title>
+        <PasswordGeneratorForm onSubmit={generatePassword} />
 
-          <ShowPasswordGenerated
-            password={passwordActual}
-            onChangePassword={setPasswordActual}
-          />
-        </Box>
+        <ShowPasswordGenerated
+          password={passwordActual}
+          onChangePassword={setPasswordActual}
+        />
       </Container>
     </Layout>
   )

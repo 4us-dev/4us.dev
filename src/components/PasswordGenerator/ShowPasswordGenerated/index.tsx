@@ -1,5 +1,6 @@
 import {
   Button,
+  Container,
   FormControl,
   Grid,
   Paper,
@@ -29,29 +30,32 @@ const ShowPasswordGenerated: React.FC<Props> = ({
   }
   return (
     <Paper className={classes.root}>
-      <Grid container spacing={4}>
-        <Grid item xs={10}>
-          <FormControl fullWidth>
-            <TextField
-              value={password}
-              onChange={handleChange}
-              InputLabelProps={{ shrink: true }}
-              inputProps={{ "aria-label": "password length to be generated" }}
-            />
-          </FormControl>
+      <Container>
+        <Grid container spacing={4}>
+          <Grid item xs={7} sm={10}>
+            <FormControl fullWidth>
+              <TextField
+                value={password}
+                onChange={handleChange}
+                InputLabelProps={{ shrink: true }}
+                inputProps={{ "aria-label": "password length to be generated" }}
+              />
+            </FormControl>
+          </Grid>
+          <Grid item xs={5} sm={2}>
+            <Tooltip title="Copy to clipboard" placement="top">
+              <Button
+                fullWidth
+                variant="contained"
+                color="secondary"
+                onClick={copyPassword}
+              >
+                COPY
+              </Button>
+            </Tooltip>
+          </Grid>
         </Grid>
-        <Grid item xs={2}>
-          <Tooltip title="Copy to clipboard" placement="top">
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={copyPassword}
-            >
-              COPY
-            </Button>
-          </Tooltip>
-        </Grid>
-      </Grid>
+      </Container>
     </Paper>
   )
 }
