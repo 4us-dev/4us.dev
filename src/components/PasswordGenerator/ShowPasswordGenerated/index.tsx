@@ -7,7 +7,7 @@ import {
   TextField,
   Tooltip,
 } from "@material-ui/core"
-import React from "react"
+import React, { useState } from "react"
 import copyToClipboard from "../../../../lib/copyToClipboard"
 import useStyles from "./index.styles"
 
@@ -19,9 +19,14 @@ const ShowPasswordGenerated: React.FC<Props> = ({
   password,
   onChangePassword,
 }) => {
+  const [copyButtonTitle, setCopyButtonTitle] = useState("COPY")
   const classes = useStyles()
 
-  const copyPassword = () => copyToClipboard(password)
+  const copyPassword = () => {
+    copyToClipboard(password)
+    setCopyButtonTitle("COPIED")
+    setTimeout(() => setCopyButtonTitle("COPY"), 1500)
+  }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -50,7 +55,7 @@ const ShowPasswordGenerated: React.FC<Props> = ({
                 color="secondary"
                 onClick={copyPassword}
               >
-                COPY
+                {copyButtonTitle}
               </Button>
             </Tooltip>
           </Grid>
