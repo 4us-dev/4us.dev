@@ -2,6 +2,7 @@ import Container from "@material-ui/core/Container"
 import React from "react"
 import Layout from "../../components/Layout"
 import Title from "../../components/Title"
+import PKCEGeneratorForm from "./_components/Form"
 
 const PKCEGenerator = (): JSX.Element => {
   return (
@@ -9,6 +10,7 @@ const PKCEGenerator = (): JSX.Element => {
       <Container>
         <Title>PKCE Generator</Title>
       </Container>
+      <PKCEGeneratorForm />
     </Layout>
   )
 }
