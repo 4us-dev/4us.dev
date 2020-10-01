@@ -19,8 +19,8 @@ const ShowPasswordAndCopy: React.FC<Props> = ({
   password,
   onChangePassword,
 }) => {
-  const [copyButtonTitle, setCopyButtonTitle] = useState("COPY")
   const classes = useStyles()
+  const [copyButtonTitle, setCopyButtonTitle] = useState("COPY")
 
   const copyPassword = () => {
     copyToClipboard(password)
