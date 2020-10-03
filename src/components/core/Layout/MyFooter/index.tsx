@@ -1,6 +1,6 @@
 import Typography from "@material-ui/core/Typography"
 import React from "react"
-import Copyright from "../../Copyright"
+import Copyright from "../../../Copyright"
 import Link from "../../Link"
 import useStyles from "./index.styles"
 

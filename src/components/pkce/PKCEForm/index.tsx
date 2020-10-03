@@ -1,7 +1,7 @@
 import { pkce } from "@4us-dev/crypto"
 import { Button, FormControl, Grid, Paper, TextField } from "@material-ui/core"
 import React, { useState } from "react"
-import copyToClipboard from "../../../../../lib/copyToClipboard"
+import copyToClipboard from "../../../../lib/copyToClipboard"
 import useStyles from "./index.styles"
 
 const PKCEGeneratorForm: React.FC = () => {

@@ -1,7 +1,7 @@
 import React from "react"
-import Banner from "../components/Home/Banner"
-import CardList from "../components/Home/CardList"
-import Layout from "../components/Layout"
+import Banner from "../src/components/Home/Banner"
+import CardList from "../src/components/Home/CardList"
+import Layout from "../src/components/core/Layout"
 
 const cards = [
   {

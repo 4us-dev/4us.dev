@@ -1,16 +1,16 @@
 import { RandomUtils } from "@4us-dev/utils"
 import Container from "@material-ui/core/Container"
 import React, { useState } from "react"
-import Layout from "../../components/Layout"
-import Title from "../../components/Title"
+import Layout from "../src/components/core/Layout"
+import Title from "../src/components/core/Title"
 import PasswordGeneratorForm, {
   PasswordGeneratorConfig,
-} from "./_components/Form"
-import ShowPasswordAndCopy from "./_components/ShowPasswordAndCopy"
+} from "../src/components/password_generator/Form"
+import ShowPasswordAndCopy from "../src/components/password_generator/ShowPasswordAndCopy"
 
 const randomUtils = new RandomUtils()
 
-const PasswordGenerator = (): JSX.Element => {
+const PasswordGeneratorPage = (): JSX.Element => {
   const [passwordActual, setPasswordActual] = useState("")
 
   const generatePassword = (config: PasswordGeneratorConfig) => {
@@ -41,4 +41,4 @@ const PasswordGenerator = (): JSX.Element => {
   )
 }
 
-export default PasswordGenerator
+export default PasswordGeneratorPage

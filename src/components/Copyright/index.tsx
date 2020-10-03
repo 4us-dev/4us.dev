@@ -1,6 +1,6 @@
 import Typography from "@material-ui/core/Typography"
 import React from "react"
-import Link from "../Link"
+import Link from "../core/Link"
 
 const Copyright = (): JSX.Element => {
   return (

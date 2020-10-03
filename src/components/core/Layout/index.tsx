@@ -1,6 +1,6 @@
 import Head from "next/head"
 import React from "react"
-import GlobalErrorHandler from "../contexts/GlobalErrorHandler"
+import GlobalErrorHandler from "../../contexts/GlobalErrorHandler"
 import MyFooter from "./MyFooter"
 import MyHeader from "./MyHeader"
 import MyMain from "./MyMain"
