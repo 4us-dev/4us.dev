@@ -16,5 +16,9 @@ yarn-error.log*
 
 # Next.js
 /.next
+/out
 
 coverage
+
+
+*.cache
