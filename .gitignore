@@ -22,3 +22,8 @@ coverage
 
 
 *.cache
+
+
+# autogenerate
+/public/sw.js
+/public/workbox-*.js

@@ -21,5 +21,5 @@ module.exports = {
     "prettier/prettier": 2,
     "@typescript-eslint/no-explicit-any": "off",
   },
-  ignorePatterns: [".next/**"],
+  ignorePatterns: [".next/**", "/public/sw.js", "/public/workbox-*.js"],
 }

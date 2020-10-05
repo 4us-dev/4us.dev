@@ -8,6 +8,14 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta
+            name="description"
+            content="tools to help you on a daily basis"
+          />
+          <meta
+            name="keywords"
+            content="4us, dev, devs, developers, tools, helpers"
+          />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           {/* PWA primary color */}
