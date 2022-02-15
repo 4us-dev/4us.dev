@@ -21,8 +21,7 @@ services:
         delay: 5s
         window: 120s
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`app.4us.dev`)"
+      - "traefik.http.routers.app.rule=Host(`app.clairton.com.br`)"
       - "traefik.http.routers.app.entrypoints=web"
       - "traefik.http.services.app.loadbalancer.server.port=3000"
     networks:
