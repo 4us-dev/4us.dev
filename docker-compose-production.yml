@@ -7,31 +7,15 @@ services:
       - TZ=America/Fortaleza
       - NEXT_PUBLIC_APP_ENV=production
     deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 256M
-      placement:
-        constraints:
-          - node.role==worker
-      replicas: 3
       update_config:
         parallelism: 1
         delay: 3s
       restart_policy:
-        condition: on-failure
-      labels:
-        - traefik.frontend.rule=Host:matricula.seduc.ce.gov.br
-        - traefik.frontend.redirect.entryPoint=https
-        - traefik.docker.network=net_app
-        - traefik.port=3000
-        - "traefik.backend.healthcheck.path=/"
-        - traefik.backend.healthcheck.interval=5s
-        - traefik.backend.healthcheck.timeout=1s
-    logging:
-      driver: loki
-      options:
-        loki-url: "http://logs.seduc.ce.gov.br:3100/loki/api/v1/push"
+        condition: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`app1.localhost`)"
+      - "traefik.http.routers.whoami.entrypoints=web"
     networks:
       - net_app
 
