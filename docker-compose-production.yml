@@ -22,9 +22,9 @@ services:
         window: 120s
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app-route.rule=Host(`app.4us.dev`)"
-      - "traefik.http.routers.app-route.entrypoints=web"
-      - "traefik.http.services.app-service.loadbalancer.server.port=3000"
+      - "traefik.http.routers.app.rule=Host(`app.4us.dev`)"
+      - "traefik.http.routers.app.entrypoints=web"
+      - "traefik.http.services.app.loadbalancer.server.port=3000"
     networks:
       - net_app
 
