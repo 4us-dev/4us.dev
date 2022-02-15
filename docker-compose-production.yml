@@ -25,6 +25,9 @@ services:
       - "traefik.http.routers.app.rule=Host(`app.clairton.com.br`)"
       - "traefik.http.routers.app.entrypoints=web"
       - "traefik.http.services.app.loadbalancer.server.port=3000"
+      - "traefik.http.services.app.loadbalancer.healthcheck.path=/"
+      - "traefik.http.services.app.loadbalancer.healthcheck.interval=10s"
+      - "traefik.http.services.app.loadbalancer.healthcheck.timeout=5s"
     networks:
       - net_app
 
