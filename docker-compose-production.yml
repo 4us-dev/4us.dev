@@ -7,11 +7,19 @@ services:
       - TZ=America/Fortaleza
       - NEXT_PUBLIC_APP_ENV=production
     deploy:
+      replicas: 1
       update_config:
         parallelism: 1
-        delay: 3s
+        order: start-first
+        failure_action: rollback
+        delay: 5s
+      rollback_config:
+        parallelism: 0
+        order: stop-first
       restart_policy:
-        condition: always
+        condition: any
+        delay: 5s
+        window: 120s
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Host(`app1.localhost`)"
