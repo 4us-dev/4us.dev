@@ -22,7 +22,7 @@ services:
         window: 120s
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`app1.localhost`)"
+      - "traefik.http.routers.whoami.rule=Host(`app1.clairton.com.br`)"
       - "traefik.http.routers.whoami.entrypoints=web"
     networks:
       - net_app

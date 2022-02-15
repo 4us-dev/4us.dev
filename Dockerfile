@@ -16,7 +16,7 @@ RUN npm run build
 FROM node:16
 WORKDIR /usr/src
 COPY --from=build /usr/src/ /usr/src/
-ARG ENV=development
+ARG ENV=production
 ENV NEXT_PUBLIC_APP_ENV=$ENV
 ENV NEXT_TELEMETRY_DISABLED=1
 EXPOSE 3000
