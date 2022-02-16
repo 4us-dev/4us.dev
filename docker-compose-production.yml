@@ -21,15 +21,17 @@ services:
         delay: 5s
         window: 120s
     labels:
-      # - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`app.4us.dev`)"
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`app.bytecom.psi.br`)"
       - "traefik.http.routers.app.entrypoints=web"
-      - "traefik.http.routers.app.tls=true"
-      - "traefik.http.routers.app.tls.certresolver=lets-encrypt"
-      - "traefik.http.services.app.loadbalancer.server.port=3000"
-      - "traefik.http.services.app.loadbalancer.healthcheck.path=/"
-      - "traefik.http.services.app.loadbalancer.healthcheck.interval=10s"
-      - "traefik.http.services.app.loadbalancer.healthcheck.timeout=5s"
+      - "traefik.http.routers.app-secure.rule=Host(`app.bytecom.psi.br`)"
+      - "traefik.http.routers.app-secure.entrypoints=web"
+      - "traefik.http.routers.app-secure.tls=true"
+      - "traefik.http.routers.app-secure.tls.certresolver=lets-encrypt"
+      # - "traefik.http.services.app.loadbalancer.server.port=3000"
+      # - "traefik.http.services.app.loadbalancer.healthcheck.path=/"
+      # - "traefik.http.services.app.loadbalancer.healthcheck.interval=10s"
+      # - "traefik.http.services.app.loadbalancer.healthcheck.timeout=5s"
     networks:
       - net_app
 
