@@ -23,9 +23,10 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.app.rule=Host(`app.bytecom.psi.br`)"
-        - "traefik.http.routers.app.entrypoints=websecure"
+        - "traefik.http.routers.app.tls=true"
         - "traefik.http.routers.app.tls.certresolver=myresolver"
         - "traefik.http.services.app-service.loadbalancer.server.port=3000"
+        # - "traefik.http.routers.app.entrypoints=websecure"
         # - "traefik.http.routers.app-secure.rule=Host(`app.bytecom.psi.br`)"
         # - "traefik.http.routers.app-secure.entrypoints=websecure"
         # - "traefik.http.routers.app-secure.tls=true"
