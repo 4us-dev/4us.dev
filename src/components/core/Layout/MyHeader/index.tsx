@@ -11,19 +11,18 @@ import useStyles from "./index.styles"
 const MyHeader = (): JSX.Element => {
   const classes = useStyles()
   const [menuOpen, setMenuOpen] = React.useState(false)
-  const toggleDrawer = (open: boolean) => (
-    event: React.KeyboardEvent | React.MouseEvent
-  ) => {
-    if (
-      event.type === "keydown" &&
-      ((event as React.KeyboardEvent).key === "Tab" ||
-        (event as React.KeyboardEvent).key === "Shift")
-    ) {
-      return
-    }
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return
+      }
 
-    setMenuOpen(open)
-  }
+      setMenuOpen(open)
+    }
 
   return (
     <div className={classes.root}>
